@@ -18,7 +18,7 @@ namespace PegaGit.Tests.Controllers
             // Arrange
             HomeController controller = new HomeController();
 
-            // Act
+            // Act 
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
