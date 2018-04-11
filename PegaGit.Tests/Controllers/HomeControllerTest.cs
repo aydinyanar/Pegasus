@@ -34,7 +34,7 @@ namespace PegaGit.Tests.Controllers
             // Arrange
             HomeController controller = new HomeController();
 
-            // Act
+             //Act
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
