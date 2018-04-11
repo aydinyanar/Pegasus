@@ -18,13 +18,14 @@ namespace PegaGit.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
-
-            // Act 
-            ViewResult result = controller.Index() as ViewResult;
+            ViewResult result;
+            using (HomeController controller = new HomeController())
+            {
+                result = controller.Index() as ViewResult;
+            }
 
             // Assert
-            Assert.That(result, Is.Null);
+            Assert.IsTrue(result!=null);
         }
 
         [Test]
